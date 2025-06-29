@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carambar & Co - Blagues</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.html" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">CARAMBAR & CO</h1>
+            <p class="subtitle">🍬 La fabrique à sourires ! 🍬</p>
+            <p class="description">
+                Découvrez nos meilleures blagues Carambar !
+                Cliquez sur le bouton pour découvrir une blague qui va vous faire rire aux éclats !
+            </p>
+        </header>
+
+        <main>
+            <div class="blague-container">
+                <div class="blague-content">
+                    <div class="placeholder">
+                        🎭 Cliquez sur le bouton pour découvrir votre première blague Carambar ! 🎭
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-blague" onclick="getBlagueAleatoire()">
+                🎲 Nouvelle Blague ! 🎲
+            </button>
+
+            <div class="loading">
+                <div class="spinner"></div>
+                Recherche d'une blague rigolote...
+            </div>
+
+            <div id="error-message" class="error" style="display: none;"></div>
+        </main>
+
+        <footer class="footer">
+            <h3>🍬 Carambar & Co 🍬</h3>
+            <p>Depuis 1954, nous fabriquons des sourires !</p>
+            <p>Nos blagues sont aussi savoureuses que nos caramels !</p>
+            <p><strong>API Version:</strong> v1.0.0</p>
+        </footer>
+    </div>
+</body>
+</html>
+
