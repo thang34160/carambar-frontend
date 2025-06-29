@@ -42,7 +42,7 @@ async function getBlagueAleatoire() {
         toggleLoading(true);
         errorElement.style.display = 'none';
 
-        const response = await fetch(`${API_BASE_URL}/blagues/random`);
+        const response = await fetch(`${API_BASE_URL}/v1/blagues/random`);
 
         if (!response.ok) {
             throw new Error(`Erreur ${response.status}: ${response.statusText}`);
@@ -87,7 +87,7 @@ async function getBlagueAleatoire() {
 async function testerAPI() {
     try {
         console.log('Test de connexion à l\'API...');
-        const response = await fetch(`${API_BASE_URL}/blagues`);
+        const response = await fetch(`${API_BASE_URL}/v1/blagues`);
 
         if (response.ok) {
             console.log('✅ Connexion à l\'API réussie !');
