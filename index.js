@@ -1,6 +1,7 @@
-// Configuration de l'API - Modifiez cette URL après déploiement
+// Configuration de l'API - déploiement sur render
 const API_BASE_URL = 'https://votre-api-render.onrender.com/api/v1';
-// Pour les tests en local : 'http://localhost:3000/api/v1'
+// Tests en local: 'http://localhost:3001/api'
+
 
 // Éléments du DOM
 const blagueContainer = document.querySelector('.blague-content');
@@ -37,12 +38,14 @@ function toggleLoading(show) {
 }
 
 // Fonction principale pour récupérer une blague aléatoire
+document.getElementById('random-joke-btn').addEventListener('click', getBlagueAleatoire);
+
 async function getBlagueAleatoire() {
     try {
         toggleLoading(true);
         errorElement.style.display = 'none';
 
-        const response = await fetch(`${API_BASE_URL}/v1/blagues/random`);
+        const response = await fetch(`${API_BASE_URL}/blagues/random`);
 
         if (!response.ok) {
             throw new Error(`Erreur ${response.status}: ${response.statusText}`);
