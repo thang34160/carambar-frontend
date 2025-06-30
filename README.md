@@ -1,2 +1,2 @@
 // github pages
-// https://github.com/thang34160/carambar-frontend/deployments/github-pages
+// https://thang34160.github.io/carambar-frontend/
